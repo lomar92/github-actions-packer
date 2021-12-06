@@ -1,7 +1,7 @@
 ---
 
 name: Packer GitHub Actions
-author: Amar Lojo 
+author: 'Amar Lojo <amarlojo@gmail.com>'
 description: Run Packer commands
 
 inputs:
