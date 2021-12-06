@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#chmod +x entrypoint.sh added
 set -e
 
 # fail if INPUT_COMMAND is not set
