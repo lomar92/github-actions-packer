@@ -1,0 +1,32 @@
+---
+
+name: Packer GitHub Actions
+author: Amar Lojo 
+description: Run Packer commands
+
+inputs:
+  command:
+    description: command to execute
+    required: true
+  arguments:
+    description: arguments for command
+    required: false
+  working_directory:
+    description: working directory for command (defaults to root)
+    required: false
+  target:
+    description: file(s) or directory to target
+    required: false
+    default: .
+
+outputs:
+  command:
+    description: interpolated command (incl. arguments) that will be executed
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+branding:
+  color: blue
+  icon: package
