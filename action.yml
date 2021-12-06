@@ -1,6 +1,6 @@
 ---
 
-name: Packer GitHub Actions
+name: Packer HCP Actions
 author: 'Amar Lojo <amarlojo@gmail.com>'
 description: Run Packer commands
 
