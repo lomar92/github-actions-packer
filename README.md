@@ -1,9 +1,17 @@
 # How to use it
-Packer v. 1.7.8
+--> Packer v. 1.7.8
+This is an updated version of the official Hashicorp packer actions: https://github.com/marketplace/actions/packer-github-actions
 
-# Copy this in your /.github/workflow/name.yml
+# GitHub Action: Packer
 
+> GitHub Action for running Packer [commands](https://www.packer.io/docs/commands).
 
+## Usage: Copy this in your /.github/workflow/name.yml
+
+Add the Action to your [GitHub Workflow](https://docs.github.com/en/actions/learn-github-actions#creating-a-workflow-file) like so:
+
+```yaml
+---
 
 name: Packer
 
@@ -42,5 +50,17 @@ jobs:
           target: packer.pkr.hcl
         env:
           PACKER_LOG: 1
+          HCP_CLIENT_ID= ${{ secrets.HCP_CLIENT_ID }}
+          HCP_CLIENT_SECRET= ${{ secrets.HCP_CLIENT_SECRET }}
 
       # additional steps to process artifacts
+```
+
+### Inputs
+
+| Name        | Description                    | Required | Default |
+|-------------|--------------------------------|----------|---------|
+| `command`   | command to execute             | yes      |         |
+| `arguments` | arguments for command          | no       |         |
+| `target`    | file(s) or directory to target | no       |   `.`   |
+
