@@ -1,6 +1,6 @@
 # How to use it
 Use this as a part of your CI Workflow
---> Packer v. 1.7.8
+--> Packer v. 1.8.0
 This is an updated version of the official Hashicorp packer actions: https://github.com/marketplace/actions/packer-github-actions
 
 # GitHub Action: Packer
